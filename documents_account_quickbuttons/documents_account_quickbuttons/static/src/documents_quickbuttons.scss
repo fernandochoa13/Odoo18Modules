@@ -1,0 +1,17 @@
+.o_documents_details_panel {
+    flex-shrink: 1 !important;
+    overflow-y: auto !important;
+}
+
+.o_documents_quick_accounting {
+    pointer-events: auto;
+
+    .btn {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    input, select {
+        pointer-events: auto;
+    }
+}
