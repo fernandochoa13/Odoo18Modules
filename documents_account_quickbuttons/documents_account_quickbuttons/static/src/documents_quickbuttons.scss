@@ -1,6 +1,11 @@
-.o_documents_details_panel {
-    flex-shrink: 1 !important;
-    overflow-y: auto !important;
+.o_document_chatter_container:not(.documents_chatter_disabled) {
+    overflow: hidden !important;
+
+    > .o_documents_details_panel {
+        flex: 0 0 auto !important;
+        max-height: 45vh !important;
+        overflow-y: auto !important;
+    }
 }
 
 .o_documents_quick_accounting {
