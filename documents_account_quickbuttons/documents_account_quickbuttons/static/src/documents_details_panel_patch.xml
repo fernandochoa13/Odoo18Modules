@@ -3,7 +3,7 @@
     <t t-name="documents_account_quickbuttons.DetailsPanelPatch"
        t-inherit="documents.DocumentsDetailsPanel"
        t-inherit-mode="extension">
-        <xpath expr="//div[hasclass('o_field_widget') and hasclass('o_field_many2many_tags') and not(span)]"
+        <xpath expr="//div[hasclass('o_field_widget') and hasclass('o_field_many2many_tags')]"
                position="after">
             <div t-if="showQuickButtons"
                  class="o_documents_quick_accounting mt-3 pt-2 border-top"
