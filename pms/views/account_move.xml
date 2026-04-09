@@ -527,11 +527,13 @@ invoices.send_daily_reminder()
         </xpath>
         <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="budget_date" invisible="[('move_type', '!=', 'entry')]"/>
-                <field name="invoice_vendor_bill_id" string="Auto-complete" optional="show"/>
+                <field name="invoice_vendor_bill_id" string="Auto-complete" optional="show"
+                       domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id)]"
+                       invisible="[('move_type', '!=', 'in_invoice')]"/>
                 <field name="linked_material_order" string="Linked Material Order" invisible="True"/>
                 <!-- <field name="date_receipted" invisible="[('move_type', '!=', 'in_invoice')]"/> -->
                 <field name="property_id" invisible="1"/>
-                <field name="linked_activities" string="Linked Activity" options="{'no_create': True}" domain="[('project_property.address', '=', property_id)]"/>
+                <field name="linked_activities" string="Linked Activity" options="{'no_create': True}" domain="[('vendor', '=', partner_id), ('project_property.address', '=', property_id)]"/>
                 <field name="linked_activities_end_date" string="Activity End Date"/>
                 <field name="activity_completed" string="Linked Activity Completed"/>
                 <field name="date_paid"/>
